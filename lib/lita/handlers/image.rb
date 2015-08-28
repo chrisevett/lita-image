@@ -8,7 +8,6 @@ module Lita
         'http://www.animateit.net/data/media/july2012/clap-animated-animation-clap-000340-large.gif',
         'http://i.imgur.com/9Zv4V.gif',
         'http://assets0.ordienetworks.com/images/GifGuide/clapping/1292223254212-dumpfm-mario-Obamaclap.gif',
-        'http://sunglasses.name/gif/joker-clap.gif',
         'http://www.reactiongifs.com/wp-content/uploads/2013/01/applause.gif',
         'http://i.imgur.com/3D5n4zT.gif', 
         'http://i.imgur.com/tnnQZQT.gif', 
