@@ -33,6 +33,12 @@ And if you wish to sensibly chuckle:
 lita chuckle
 ```
 
+If something is bretty good
+
+```
+lita 5/5
+```
+
 
 
 ## License
