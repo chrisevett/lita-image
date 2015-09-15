@@ -55,7 +55,7 @@ module Lita
       route(/\bchuckle sensibly\b/i, :chuckle, command: true, help: { "chuckle" => "chuckle, sensibly." })
 
       # bretty good
-      route(/\b5\/5\b/i, :brettyGood, command: true, help: { "5/5" => "bretty good :-DDD" })
+      route(/\b5\\5\b/i, :brettyGood, command: true, help: { "5/5" => "bretty good :-DDD" })
       
 
       def applause(response)
@@ -70,7 +70,7 @@ module Lita
          response.reply SensibleChuckle.sample
       end      
 
-      def brettyGood(respone)
+      def brettyGood(response)
       	 response.reply BrettyGood.sample
       end
       
