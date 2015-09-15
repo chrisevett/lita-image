@@ -40,6 +40,10 @@ module Lita
         SensibleChuckle = [
         'http://i.imgur.com/himZD0M.gif'
         ]      
+
+        BrettyGood = [
+        'http://i.imgur.com/4NlIaDH.gif'
+        ]              
       
       # applause route
       route(/applau(d|se)|bravo|slow clap/i, :applause, command: true, help: {"applause" => "Sends image of applause."})
@@ -49,6 +53,10 @@ module Lita
       
       # chuckle route
       route(/\bchuckle sensibly\b/i, :chuckle, command: true, help: { "chuckle" => "chuckle, sensibly." })
+
+      # bretty good
+      route(/\b5\/5\b/i, :brettyGood, command: true, help: { "5/5" => "bretty good :-DDD" })
+      
 
       def applause(response)
         response.reply ApplauseImages.sample
@@ -61,6 +69,11 @@ module Lita
       def chuckle(response)
          response.reply SensibleChuckle.sample
       end      
+
+      def brettyGood(respone)
+      	 response.reply BrettyGood.sample
+      end
+      
     end
 
     Lita.register_handler(Image)
