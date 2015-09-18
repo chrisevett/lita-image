@@ -36,7 +36,7 @@ lita chuckle
 If something is bretty good
 
 ```
-lita 5/5
+lita 5\5
 ```
 
 
