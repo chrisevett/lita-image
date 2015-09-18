@@ -70,7 +70,7 @@ module Lita
          response.reply SensibleChuckle.sample
       end      
 
-      def brettyGood(respone)
+      def brettyGood(response)
       	 response.reply BrettyGood.sample
       end
       
