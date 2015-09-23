@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-image"
-  spec.version       = "0.0.4"
+  spec.version       = "0.0.5"
   spec.authors       = ["Chris Evett"]
   spec.email         = ["chris.evett@gmail.com"]
   spec.description   = "Send several types of images to the chat"
