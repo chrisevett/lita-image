@@ -35,8 +35,14 @@ module Lita
          'http://i.imgur.com/5KjkT6x.gif',
          'http://i.imgur.com/SNtpaEn.gif',
          'http://i.imgur.com/qTAZJVx.png',
-         'http://i.imgur.com/cOctbop.png', # rendicott: added
-         'http://i.imgur.com/RsK1sYH.png'  # rendicott: added
+         'http://i.imgur.com/cOctbop.png', # rendicott:  added
+         'http://i.imgur.com/RsK1sYH.png', # rendicott:  added
+	 'http://i.imgur.com/EuhX7oq.gif', # chrisevett: added
+	 'http://i.imgur.com/9LYxFXr.gif', # chrisevett: added
+	 'http://i.imgur.com/0LyneTh.gif'  # chrisevett: added
+
+
+
         ]
         
         SensibleChuckle = [
