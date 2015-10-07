@@ -39,7 +39,8 @@ module Lita
          'http://i.imgur.com/RsK1sYH.png', # rendicott:  added
 	 'http://i.imgur.com/EuhX7oq.gif', # chrisevett: added
 	 'http://i.imgur.com/9LYxFXr.gif', # chrisevett: added
-	 'http://i.imgur.com/0LyneTh.gif'  # chrisevett: added
+	 'http://i.imgur.com/0LyneTh.gif', # chrisevett: added
+	 'http://i.imgur.com/6saY3q3.png'  # chrisevett: added
 
 
 
