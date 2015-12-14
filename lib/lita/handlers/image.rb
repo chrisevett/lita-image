@@ -53,7 +53,10 @@ module Lita
 
         BrettyGood = [
         'http://i.imgur.com/4NlIaDH.gif'
-        ]              
+        ]             
+        LunchImages = [
+        'http://i.imgur.com/AN6eAQC.gif'
+        ]
       
       # applause route
       route(/applau(d|se)|bravo|slow clap/i, :applause, command: true, help: {"applause" => "Sends image of applause."})
@@ -67,9 +70,16 @@ module Lita
       # bretty good
       route(/\b5\\5\b/i, :brettyGood, command: true, help: { "5\\5" => "bretty good :-DDD" })
       
+      # lunch suggest
+      route(/\blunch suggest\b/i, :lunch, command: true, help: { "lunch suggest" => "tells you where to eat" })
+      
 
       def applause(response)
         response.reply ApplauseImages.sample
+      end
+
+      def lunch(response)
+        response.reply LunchImages.sample
       end
       
       def doge(response)
