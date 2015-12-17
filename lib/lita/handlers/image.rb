@@ -37,14 +37,11 @@ module Lita
          'http://i.imgur.com/qTAZJVx.png',
          'http://i.imgur.com/cOctbop.png', # rendicott:  added
          'http://i.imgur.com/RsK1sYH.png', # rendicott:  added
-	 'http://i.imgur.com/EuhX7oq.gif', # chrisevett: added
-	 'http://i.imgur.com/9LYxFXr.gif', # chrisevett: added
-	 'http://i.imgur.com/0LyneTh.gif', # chrisevett: added
-	 'http://i.imgur.com/6saY3q3.png', # chrisevett: added
-	 'http://i.imgur.com/KkCibCH.jpg'  # chrisevett: added 
-
-
-
+         'http://i.imgur.com/EuhX7oq.gif', # chrisevett: added
+         'http://i.imgur.com/9LYxFXr.gif', # chrisevett: added
+         'http://i.imgur.com/0LyneTh.gif', # chrisevett: added
+         'http://i.imgur.com/6saY3q3.png', # chrisevett: added
+         'http://i.imgur.com/KkCibCH.jpg'  # chrisevett: added 
         ]
         
         SensibleChuckle = [
@@ -53,10 +50,17 @@ module Lita
 
         BrettyGood = [
         'http://i.imgur.com/4NlIaDH.gif'
-        ]             
+        ]      
+        
         LunchImages = [
         'http://i.imgur.com/AN6eAQC.gif'
         ]
+        
+        SuccessImage = [
+        'http://i.imgur.com/xh1EnRf.jpg'
+        ]  
+        
+        
       
       # applause route
       route(/applau(d|se)|bravo|slow clap/i, :applause, command: true, help: {"applause" => "Sends image of applause."})
@@ -72,6 +76,9 @@ module Lita
       
       # lunch suggest
       route(/\blunch suggest\b/i, :lunch, command: true, help: { "lunch suggest" => "tells you where to eat" })
+      
+      # success route
+      route(/\bsuccess baby\b/i, :success, command: true, help: { "success baby" => "Do it for Christine" })      
       
 
       def applause(response)
