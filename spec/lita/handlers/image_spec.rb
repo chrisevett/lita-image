@@ -10,4 +10,5 @@ describe Lita::Handlers::Image, lita_handler: true do
   it { is_expected.to route_command("5\5").to(:brettyGood) }  
   it { is_expected.to route_command("lunch suggest").to(:lunch) }  
   it { is_expected.to route_command("success baby").to(:success) }
+  it { is_expected.to route_command("fail").to(:fail) }
 end
