@@ -59,6 +59,14 @@ module Lita
         SuccessImage = [
         'http://i.imgur.com/xh1EnRf.jpg'
         ]  
+
+        FailImages = [
+        'http://imgur.com/VOsMKKP',
+        'http://imgur.com/LvgxWa2',
+        'http://imgur.com/LvgxWa2',
+        'http://imgur.com/LvgxWa2',
+        'http://imgur.com/LvgxWa2'
+        ]
         
         
       
@@ -78,7 +86,10 @@ module Lita
       route(/\blunch suggest\b/i, :lunch, command: true, help: { "lunch suggest" => "tells you where to eat" })
       
       # success route
-      route(/\bsuccess baby\b/i, :success, command: true, help: { "success baby" => "Do it for Christine" })      
+      route(/\bsuccess baby\b/i, :success, command: true, help: { "success baby" => "Do it for Christine" })   
+
+      # fail route
+      route(/\bfail\b/i, :fail, command: true, help: { "fail" => "Display a fail image" })   
       
 
       def applause(response)
@@ -99,6 +110,14 @@ module Lita
 
       def brettyGood(response)
       	 response.reply BrettyGood.sample
+      end
+
+      def fail(response)
+         response.reply FailImages.sample
+      end
+
+        def success(response)
+         response.reply SuccessImage.sample
       end
       
     end
