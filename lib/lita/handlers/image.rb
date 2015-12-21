@@ -61,11 +61,11 @@ module Lita
         ]  
 
         FailImages = [
-        'http://imgur.com/VOsMKKP',
-        'http://imgur.com/LvgxWa2',
-        'http://imgur.com/LvgxWa2',
-        'http://imgur.com/LvgxWa2',
-        'http://imgur.com/LvgxWa2'
+        'http://i.imgur.com/lP0RNPs.jpg',
+        'http://i.imgur.com/ZgMUXSo.jpg',
+        'http://i.imgur.com/uQutI49.jpg',
+        'http://i.imgur.com/LvgxWa2.jpg',
+        'http://i.imgur.com/VOsMKKP.png'
         ]
         
         
@@ -89,7 +89,7 @@ module Lita
       route(/\bsuccess baby\b/i, :success, command: true, help: { "success baby" => "Do it for Christine" })   
 
       # fail route
-      route(/\bfail\b/i, :fail, command: true, help: { "fail" => "Display a fail image" })   
+      route(/\bfail\b/i, :fail, command: false, help: { "fail" => "Display a fail image" })   
       
 
       def applause(response)
