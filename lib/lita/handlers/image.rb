@@ -69,6 +69,13 @@ module Lita
         ]
         
         
+        DigitalStyleImages = [
+        'http://i.imgur.com/RtGsVFB.jpg',
+	'http://i.imgur.com/vhwPY4z.png',
+	'http://i.imgur.com/mPp6B2E.png',
+	'http://i.imgur.com/rnpMwCB.gif',
+	'http://i.imgur.com/DCbwdY2.png'
+        ]  
       
       # applause route
       route(/applau(d|se)|bravo|slow clap/i, :applause, command: true, help: {"applause" => "Sends image of applause."})
@@ -90,7 +97,9 @@ module Lita
 
       # fail route
       route(/\bfail\b/i, :fail, command: false, help: { "fail" => "Display a fail image" })   
-      
+
+      # digital style
+      route(/\bdigital style\b/i, :digitalStyle, command: true, help: { "digital style" => "one of the 3 things to do on the computer" })   
 
       def applause(response)
         response.reply ApplauseImages.sample
@@ -116,10 +125,13 @@ module Lita
          response.reply FailImages.sample
       end
 
-        def success(response)
+      def success(response)
          response.reply SuccessImage.sample
       end
       
+      def digitalStyle(response)
+         response.reply DigitalStyleImages.sample
+      end
     end
 
     Lita.register_handler(Image)
