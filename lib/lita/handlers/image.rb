@@ -71,11 +71,23 @@ module Lita
         
         DigitalStyleImages = [
         'http://i.imgur.com/RtGsVFB.jpg',
-	'http://i.imgur.com/vhwPY4z.png',
-	'http://i.imgur.com/mPp6B2E.png',
-	'http://i.imgur.com/rnpMwCB.gif',
-	'http://i.imgur.com/DCbwdY2.png'
+	      'http://i.imgur.com/vhwPY4z.png',
+	      'http://i.imgur.com/mPp6B2E.png',
+	      'http://i.imgur.com/rnpMwCB.gif',
+	      'http://i.imgur.com/DCbwdY2.png'
         ]  
+
+        ShipItImages = [
+        'http://i.imgur.com/bKmAzNK.png',
+        'http://i.imgur.com/YoJNNqI.jpg',
+        'http://i.imgur.com/fW4UbYZ.png',
+        'http://i.imgur.com/pjVI4eO.jpg',
+        'http://i.imgur.com/voR9uvG.jpg',
+        'http://i.imgur.com/bHFp2cb.jpg',
+        'http://i.imgur.com/bBAFpPT.jpg',
+        'http://i.imgur.com/dlUrMkK.jpg',
+        'http://i.imgur.com/EOdw1hP.jpg'
+        ]
       
       # applause route
       route(/applau(d|se)|bravo|slow clap/i, :applause, command: true, help: {"applause" => "Sends image of applause."})
@@ -100,6 +112,10 @@ module Lita
 
       # digital style
       route(/\bdigital style\b/i, :digitalStyle, command: true, help: { "digital style" => "one of the 3 things to do on the computer" })   
+      
+      # Ship It
+      route(/\bship it\b/i, :shipIt, command: true, help: { "ship it" => "eh, it's probably fine..." })  
+
 
       def applause(response)
         response.reply ApplauseImages.sample
@@ -131,6 +147,10 @@ module Lita
       
       def digitalStyle(response)
          response.reply DigitalStyleImages.sample
+      end
+
+      def shipIt(response)
+         response.reply ShipItImages.sample
       end
     end
 

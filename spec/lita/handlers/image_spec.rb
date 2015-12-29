@@ -12,4 +12,5 @@ describe Lita::Handlers::Image, lita_handler: true do
   it { is_expected.to route_command("success baby").to(:success) }
   it { is_expected.to route_command("fail").to(:fail) }
   it { is_expected.to route_command("digital style").to(:digitalStyle) }
+  it { is_expected.to route_command("ship it").to(:shipIt) }
 end
