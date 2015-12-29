@@ -114,7 +114,7 @@ module Lita
       route(/\bdigital style\b/i, :digitalStyle, command: true, help: { "digital style" => "one of the 3 things to do on the computer" })   
       
       # Ship It
-      route(/\bship it\b/i, :shipIt, command: true, help: { "ship it" => "eh, it's probably fine..." })  
+      route(/\bship it\b/i, :shipIt, command: false, help: { "ship it" => "eh, it's probably fine..." })  
 
 
       def applause(response)
