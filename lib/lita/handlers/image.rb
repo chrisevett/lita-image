@@ -88,6 +88,10 @@ module Lita
         'http://i.imgur.com/dlUrMkK.jpg',
         'http://i.imgur.com/EOdw1hP.jpg'
         ]
+        
+        GoldStarImages = [
+        'http://i.imgur.com/MQN0uzC.png'
+        ]
       
       # applause route
       route(/applau(d|se)|bravo|slow clap/i, :applause, command: true, help: {"applause" => "Sends image of applause."})
@@ -108,13 +112,16 @@ module Lita
       route(/\bsuccess baby\b/i, :success, command: true, help: { "success baby" => "Do it for Christine" })   
 
       # fail route
-      route(/\bfail\b/i, :fail, command: false, help: { "fail" => "Display a fail image" })   
+      route(/\bfail\b/i, :fail, command: true, help: { "fail" => "Display a fail image" })   
 
       # digital style
       route(/\bdigital style\b/i, :digitalStyle, command: true, help: { "digital style" => "one of the 3 things to do on the computer" })   
       
       # Ship It
       route(/\bship it\b/i, :shipIt, command: false, help: { "ship it" => "eh, it's probably fine..." })  
+      
+      # Gold Star
+      route(/\bgold star\b/i, :goldStar, command: true, help: { "gold star" => "you get a gold star!" })  
 
 
       def applause(response)
@@ -152,6 +159,11 @@ module Lita
       def shipIt(response)
          response.reply ShipItImages.sample
       end
+
+      def goldStar(response)
+         response.reply GoldStarImages.sample
+      end      
+      
     end
 
     Lita.register_handler(Image)
