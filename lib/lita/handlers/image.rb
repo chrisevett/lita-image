@@ -92,7 +92,15 @@ module Lita
         GoldStarImages = [
         'http://i.imgur.com/MQN0uzC.png'
         ]
+
+	EliteImages = [
+	'http://i.imgur.com/0XZc65v.png'
+	]
       
+     
+      # elite route 
+      route(/elite/i, :elite, command: false, help: {"elite" => "Sooo elite....Yes!"}       
+
       # applause route
       route(/applau(d|se)|bravo|slow clap/i, :applause, command: true, help: {"applause" => "Sends image of applause."})
       
@@ -162,7 +170,12 @@ module Lita
 
       def goldStar(response)
          response.reply GoldStarImages.sample
-      end      
+      end
+
+      def
+	  elite(response)
+	  response.reply EliteImages.sample
+      end
       
     end
 
