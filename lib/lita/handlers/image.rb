@@ -99,7 +99,7 @@ module Lita
       
      
       # elite route 
-      route(/elite/i, :elite, command: false, help: {"elite" => "Sooo elite....Yes!"}       
+      route(/elite/i, :elite, command: false, help: {"elite" => "Sooo elite....Yes!"})
 
       # applause route
       route(/applau(d|se)|bravo|slow clap/i, :applause, command: true, help: {"applause" => "Sends image of applause."})
