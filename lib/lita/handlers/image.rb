@@ -58,7 +58,12 @@ module Lita
         
         SuccessImage = [
         'http://i.imgur.com/xh1EnRf.jpg'
-        ]  
+        ]
+
+        SkrumpetImage = [
+          'http://i.imgur.com/qdsezPu.gif'
+        ]
+
 
         FailImages = [
         'http://i.imgur.com/lP0RNPs.jpg',
@@ -93,9 +98,9 @@ module Lita
         'http://i.imgur.com/MQN0uzC.png'
         ]
 
-	EliteImages = [
-	'http://i.imgur.com/0XZc65v.png'
-	]
+        EliteImages = [
+        'http://i.imgur.com/0XZc65v.png'
+        ]
       
      
       # elite route 
@@ -129,8 +134,15 @@ module Lita
       route(/\bship it\b/i, :shipIt, command: false, help: { "ship it" => "eh, it's probably fine..." })  
       
       # Gold Star
-      route(/\bgold star\b/i, :goldStar, command: true, help: { "gold star" => "you get a gold star!" })  
+      route(/\bgold star\b/i, :goldStar, command: true, help: { "gold star" => "you get a gold star!" })
 
+      # Skrumpet
+      route(/\bskrumpet\b/i, :skrumpet, command: true, help: { "Skrumpet" => "2spoopy4me" })
+
+
+      def skrumpet(response)
+        response.reply SkrumpetImage.sample
+      end
 
       def applause(response)
         response.reply ApplauseImages.sample
@@ -172,9 +184,8 @@ module Lita
          response.reply GoldStarImages.sample
       end
 
-      def
-	  elite(response)
-	  response.reply EliteImages.sample
+      def elite(response)
+	       response.reply EliteImages.sample
       end
       
     end
