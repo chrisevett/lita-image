@@ -61,7 +61,7 @@ module Lita
         ]
 
         SkrumpetImage = [
-          'http://i.imgur.com/qdsezPu.gif'
+          'https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif'
         ]
 
 
