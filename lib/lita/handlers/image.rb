@@ -53,7 +53,8 @@ module Lita
         ]      
         
         LunchImages = [
-        'http://i.imgur.com/AN6eAQC.gif'
+        'http://i.imgur.com/AN6eAQC.gif',
+	'http://i.imgur.com/W1rAgws.jpg'
         ]
         
         SuccessImage = [
