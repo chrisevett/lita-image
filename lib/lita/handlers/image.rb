@@ -14,7 +14,8 @@ module Lita
         'http://i.imgur.com/CAQa8Q0.gif', 
         'http://i.imgur.com/IPh5pvu.gif', 
         'http://i.imgur.com/OXEeb5o.gif', 
-        'http://i.imgur.com/1g5ltcr.gif' 
+        'http://i.imgur.com/1g5ltcr.gif',
+	'http://i.imgur.com/krwQCTc.gif' #chrisevett: added 
         ]
         
         DogeImages = [
