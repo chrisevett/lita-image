@@ -102,6 +102,13 @@ module Lita
         EliteImages = [
         'http://i.imgur.com/0XZc65v.png'
         ]
+		
+        HappeningImage = [
+        'http://i.imgur.com/D7jjFjB.jpg',
+		'http://i.imgur.com/oNIXLov.gif'
+        ]		
+		
+
       
      
       # elite route 
@@ -117,7 +124,7 @@ module Lita
       route(/\bchuckle sensibly\b/i, :chuckle, command: true, help: { "chuckle sensibly" => "chuckle, sensibly." })
 
       # bretty good
-      route(/\b5\\5\b/i, :brettyGood, command: true, help: { "5\\5" => "bretty good :-DDD" })
+      route(/\b5(\\|\/)5\b/i, :brettyGood, command: true, help: { "5\\5" => "bretty good :-DDD" })
       
       # lunch suggest
       route(/\blunch suggest\b/i, :lunch, command: true, help: { "lunch suggest" => "tells you where to eat" })
@@ -139,7 +146,14 @@ module Lita
 
       # Skrumpet
       route(/\bskrumpet\b/i, :skrumpet, command: true, help: { "Skrumpet" => "2spoopy4me" })
+	  
+	  # It's Happening :-DDD
+      route(/\b(its|it's) happening\b/i, :happening, command: true, help: { "it's happening" => "t. ron paul" })
 
+
+      def happening(response)
+        response.reply HappeningImage.sample
+      end
 
       def skrumpet(response)
         response.reply SkrumpetImage.sample
