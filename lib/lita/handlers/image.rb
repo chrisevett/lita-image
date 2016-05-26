@@ -123,7 +123,7 @@ module Lita
       route(/\bchuckle sensibly\b/i, :chuckle, command: true, help: { "chuckle sensibly" => "chuckle, sensibly." })
 
       # bretty good
-      route(/\b5(\\|\/)5\b/i, :brettyGood, command: true, help: { "5\\5" => "bretty good :-DDD" })
+      route(/\b5(\\|\/)5\b/i, :brettyGood, command: false, help: { "5\\5" => "bretty good :-DDD" })
       
       # lunch suggest
       route(/\blunch suggest\b/i, :lunch, command: true, help: { "lunch suggest" => "tells you where to eat" })
@@ -144,10 +144,10 @@ module Lita
       route(/\bgold star\b/i, :goldStar, command: true, help: { "gold star" => "you get a gold star!" })
 
       # Skrumpet
-      route(/\bskrumpet\b/i, :skrumpet, command: true, help: { "Skrumpet" => "2spoopy4me" })
+      route(/\bskrumpet\b/i, :skrumpet, command: false, help: { "Skrumpet" => "2spoopy4me" })
 	  
 	  # It's Happening :-DDD
-      route(/\b(its|it's) happening\b/i, :happening, command: true, help: { "it's happening" => "t. ron paul" })
+      route(/\b(its|it's) happening\b/i, :happening, command: false, help: { "it's happening" => "t. ron paul" })
 
 
       def happening(response)
