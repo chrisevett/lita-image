@@ -104,7 +104,6 @@ module Lita
         ]
 		
         HappeningImage = [
-        'http://i.imgur.com/D7jjFjB.jpg',
 		'http://i.imgur.com/oNIXLov.gif'
         ]		
 		
