@@ -14,7 +14,7 @@ module Lita
         'http://i.imgur.com/IPh5pvu.gif', 
         'http://i.imgur.com/OXEeb5o.gif', 
         'http://i.imgur.com/1g5ltcr.gif',
-	'http://i.imgur.com/krwQCTc.gif' #chrisevett: added 
+	      'http://i.imgur.com/krwQCTc.gif' #chrisevett: added 
         ]
         
         DogeImages = [
@@ -50,11 +50,15 @@ module Lita
 
         BrettyGood = [
         'http://i.imgur.com/4NlIaDH.gif'
-        ]      
+        ]    
+
+        WellFug = [
+        'http://i.imgur.com/SnVyE75.jpg'
+        ]        
         
         LunchImages = [
         'http://i.imgur.com/AN6eAQC.gif',
-	'http://i.imgur.com/W1rAgws.jpg'
+	      'http://i.imgur.com/W1rAgws.jpg'
         ]
         
         SuccessImage = [
@@ -62,7 +66,7 @@ module Lita
         ]
 
         SkrumpetImage = [
-          'https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif'
+        'https://media.giphy.com/media/J0WeVOLjuqW2I/giphy.gif'
         ]
 
 
@@ -104,7 +108,7 @@ module Lita
         ]
 		
         HappeningImage = [
-		'http://i.imgur.com/oNIXLov.gif'
+		    'http://i.imgur.com/oNIXLov.gif'
         ]		
 		
 
@@ -124,6 +128,9 @@ module Lita
 
       # bretty good
       route(/\b5(\\|\/)5\b/i, :brettyGood, command: false, help: { "5\\5" => "bretty good :-DDD" })
+      
+      # well fug
+      route(/\b1(\\|\/)5\b/i, :wellFug, command: false, help: { "1\\5" => "well fug :DD" })
       
       # lunch suggest
       route(/\blunch suggest\b/i, :lunch, command: true, help: { "lunch suggest" => "tells you where to eat" })
@@ -177,6 +184,10 @@ module Lita
       def brettyGood(response)
       	 response.reply BrettyGood.sample
       end
+      
+      def wellFug(response)
+      	 response.reply WellFug.sample
+      end      
 
       def fail(response)
          response.reply FailImages.sample
