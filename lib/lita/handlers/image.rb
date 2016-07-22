@@ -110,9 +110,14 @@ module Lita
         HappeningImage = [
 		    'http://i.imgur.com/oNIXLov.gif'
         ]		
+
+        ChelkoImage = [
+		    'http://i.imgur.com/bOgtxmg.png'
+        ]        
 		
 
-      
+      # chelko route 
+      route(/chelko/i, :chelko, command: false, help: {"chelko" => "dat spicy boi"})
      
       # elite route 
       route(/elite/i, :elite, command: false, help: {"elite" => "Sooo elite....Yes!"})
@@ -156,6 +161,10 @@ module Lita
 	  # It's Happening :-DDD
       route(/\b(its|it's) happening\b/i, :happening, command: false, help: { "it's happening" => "t. ron paul" })
 
+
+      def chelko(response)
+      	response.reply ChelkoImage.sample
+      end
 
       def happening(response)
         response.reply HappeningImage.sample
