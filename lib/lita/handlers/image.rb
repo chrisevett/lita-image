@@ -117,7 +117,7 @@ module Lita
 		
 
       # chelko route 
-      route(/chelko/i, :chelko, command: false, help: {"chelko" => "dat spicy boi"})
+      route(/chelko/i, :chelko, command: true, help: {"chelko" => "dat spicy boi"})
      
       # elite route 
       route(/elite/i, :elite, command: false, help: {"elite" => "Sooo elite....Yes!"})
