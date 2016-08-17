@@ -114,7 +114,14 @@ module Lita
         ChelkoImage = [
 		    'http://i.imgur.com/bOgtxmg.png'
         ]        
+        
+	ReeeeImage = [
+		    'http://i.imgur.com/SOOJ2bm.gif'
+        ]        
 		
+
+      # reeee route 
+      route(/(R|r)eeeee/i, :reeee, command: false, help: {"reeee" => "NORMIES REEEEE"})
 
       # chelko route 
       route(/chelko/i, :chelko, command: true, help: {"chelko" => "dat spicy boi"})
@@ -161,6 +168,10 @@ module Lita
 	  # It's Happening :-DDD
       route(/\b(its|it's) happening\b/i, :happening, command: false, help: { "it's happening" => "t. ron paul" })
 
+
+      def reeee(response)
+      	response.reply ReeeeImage.sample
+      end
 
       def chelko(response)
       	response.reply ChelkoImage.sample
