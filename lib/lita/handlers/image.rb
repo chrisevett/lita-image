@@ -121,7 +121,7 @@ module Lita
 		
 
       # reeee route 
-      route(/(R|r)eeeee/i, :reeee, command: false, help: {"reeee" => "NORMIES REEEEE"})
+      route(/reeeee.*/i, :reeee, command: false, help: {"reeee" => "NORMIES REEEEE"})
 
       # chelko route 
       route(/chelko/i, :chelko, command: true, help: {"chelko" => "dat spicy boi"})
